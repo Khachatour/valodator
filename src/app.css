@@ -61,11 +61,16 @@ body {
 }
 
 .App-intro > P {
+  margin-top: 2rem;
   margin-bottom: 0;
 }
 
 .commit-field {
   width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .commit-field > textarea {
@@ -78,4 +83,39 @@ body {
 .commit-field > p {
   text-align: center;
   color: white;
+}
+
+.valodate-button {
+  margin-top: 1rem;
+  cursor: pointer;
+  outline: none;
+  background-color: #111c50;
+  border: none;
+  color: white;
+  padding: 1rem 6rem;
+  border-radius: 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Futura", Fallback, sans-serif;
+}
+
+.greeting {
+  display: flex;
+  color: white;
+  margin-left: 1rem;
+}
+
+.greeting > p > a {
+  text-decoration: none;
+  color: white;
+}
+
+.greeting > img {
+  display: inline-flex;
+  flex-direction: row;
+  align-self: center;
+  width: 50px;
+  margin-left: -8px;
 }

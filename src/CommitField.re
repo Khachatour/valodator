@@ -1,18 +1,20 @@
 type action =
-  | Change(string);
+  | Change(string)
+  | KeyDown;
 
 type state = {text: string};
 
-let component = ReasonReact.reducerComponent("MyForm");
+let component = ReasonReact.reducerComponent("CommitField");
 
 let make = _children => {
   ...component,
   initialState: () => {text: ""},
-  reducer: (action, _state) =>
+  reducer: (action, state) =>
     switch action {
-    | Change(text) =>
-      Js.log(text);
-      ReasonReact.Update({text: text});
+    | Change(text) => ReasonReact.Update({text: text})
+    | KeyDown =>
+      Js.log(state);
+      ReasonReact.NoUpdate;
     },
   render: self =>
     <div className="commit-field">
@@ -27,6 +29,7 @@ let make = _children => {
         rows=12
         cols=24
         value=self.state.text
+        onKeyDown=(_e => self.send(KeyDown))
         onChange=(
           e =>
             self.send(
@@ -36,5 +39,8 @@ let make = _children => {
             )
         )
       />
+      <button className="valodate-button">
+        (ReasonReact.stringToElement("valodate"))
+      </button>
     </div>
 };
