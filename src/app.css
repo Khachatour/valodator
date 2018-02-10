@@ -49,6 +49,7 @@ body {
 
 .App {
   display: flex;
+  flex-direction: column;
   flex: 1;
   justify-content: center;
   align-items: center;
@@ -57,4 +58,24 @@ body {
 .App-intro {
   color: white;
   font-size: 5rem;
+}
+
+.App-intro > P {
+  margin-bottom: 0;
+}
+
+.commit-field {
+  width: 60%;
+}
+
+.commit-field > textarea {
+  font-family: "Futura", Fallback, sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  width: 100%;
+}
+
+.commit-field > p {
+  text-align: center;
+  color: white;
 }
