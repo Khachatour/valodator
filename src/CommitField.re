@@ -55,7 +55,9 @@ let make = _children => {
             )
         )
       />
-      <button className="valodate-button"> (str("valodate")) </button>
+      <button className="valodate-button" onClick=((_) => send(KeyDown(13)))>
+        (str("valodate"))
+      </button>
     </div>;
   }
 };
