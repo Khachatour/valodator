@@ -8,10 +8,10 @@ let make = _children => {
     <div className="greeting">
       <p>
         (ReasonReact.stringToElement("Made with " ++ {js|❤️|js} ++ " at "))
+        <img src=logo />
         <a href="https://www.renderforest.com">
           (ReasonReact.stringToElement("Renderforest"))
         </a>
       </p>
-      <img src=logo />
     </div>
 };

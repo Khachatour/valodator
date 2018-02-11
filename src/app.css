@@ -61,7 +61,7 @@ body {
 }
 
 .App-intro > P {
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 0;
 }
 
@@ -74,6 +74,7 @@ body {
 }
 
 .commit-field > textarea {
+  outline: none;
   font-family: "Futura", Fallback, sans-serif;
   font-weight: 400;
   font-size: 2rem;
@@ -104,18 +105,26 @@ body {
 .greeting {
   display: flex;
   color: white;
-  margin-left: 1rem;
+}
+
+.greeting > p {
+  display: flex;
 }
 
 .greeting > p > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   color: white;
 }
 
-.greeting > img {
+.greeting > p > img {
   display: inline-flex;
   flex-direction: row;
   align-self: center;
+  justify-content: center;
   width: 50px;
   margin-left: -8px;
+  margin-right: -8px;
 }
